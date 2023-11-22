@@ -10,8 +10,8 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 
 typedef struct specifiers {
-    char specifier;
+    char specifiers;
     int (*function)(va_list);
-} formatSpecifier;
+} formatSpecifiers;
 
 #endif
