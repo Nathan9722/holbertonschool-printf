@@ -11,8 +11,8 @@ int _putchar(char c);
 int _putchar(char c);
 
 typedef struct specifiers {
-    char specifier;
+    char specifiers;
     int (*function)(va_list);
-} formatSpecifier;
+} formatSpecifiers;
 
 #endif
