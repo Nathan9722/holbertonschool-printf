@@ -1,0 +1,45 @@
+printf(3)                                      User Commands                                     printf(3)
+
+NAME
+       printf - format and print data
+
+SYNOPSIS
+       printf FORMAT [ARGUMENT]...
+
+DESCRIPTION
+       printf formats and prints data according to the FORMAT specification. It is similar to the C
+       function printf() and provides a powerful way to format and display output.
+
+OPTIONS
+       The printf command supports various format specifiers, which begin with a percent sign (%) and are
+       followed by one or more format characters. The most common format specifiers include:
+
+       %c     Print a character.
+
+       %s     Print a string.
+
+       %d     Print a signed decimal.
+       
+       %i     Print a signed integer.
+
+ARGUMENTS
+       FORMAT A string that specifies the format of the output. It can contain plain text and format
+              specifiers.
+
+       ARGUMENT
+              Values to be formatted and printed according to the format specifiers in the FORMAT string.
+
+EXAMPLES
+       To print a simple string:
+
+              printf ("Hello, World!\n")
+
+       To print a formatted integer:
+
+              printf ("The answer is: %d\n")
+
+BUGS
+       Report bugs to https://github.com/Nathan9722/holbertonschool-printf
+
+AUTHOR
+       Written by Nathan & Ali
