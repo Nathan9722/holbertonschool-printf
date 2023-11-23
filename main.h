@@ -13,6 +13,6 @@ int _putchar(char c);
 typedef struct specifiers {
     char specifiers;
     int (*function)(va_list);
-} formatSpecifiers;
+} specifiers;
 
 #endif
