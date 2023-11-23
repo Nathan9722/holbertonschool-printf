@@ -2,14 +2,12 @@
 #include <unistd.h>
 
 /**
- * print_mod - print %.
- *
- * @args: arguments.
- *
- * Return: count of chars.
+ * print_mod - Print %.
+ * @args: Arguments.
+ * Return: Chars.
  */
 
-int print_mod(va_list args)
+int printmodulo(va_list args)
 {
 	(void)args;
 
