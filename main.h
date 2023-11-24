@@ -14,7 +14,7 @@ int printmodulo(va_list args);
 
 typedef struct specifiers {
     char specifiers;
-    int (*function)(va_list);
+    int (*format)(va_list);
 } specifiers;
 
 #endif

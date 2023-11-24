@@ -33,20 +33,21 @@ int _printf(const char *format, ...)
 			char specifier = *(p + 1);
 
 			if (specifier == 'c')
-				num += fun_character(arguments);
+				num += printchar(arguments);
 			else if (specifier == 's')
-				num += fun_string(arguments);
+				num += printstring(arguments);
 			else if (specifier == '%')
 			{
 				_putchar('%');
 				num++;
 			}
 			else if (specifier == 'i' || specifier == 'd')
-				num += fun_integer(arguments);
+				num += printdigit(arguments);
 			else if (specifier == '\0')
 				return (-1);
 			else
 			{
+                else if (specifier == '%')
 				_putchar('%');
 				_putchar(specifier);
 				num += 2;
