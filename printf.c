@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
     va_list args;
     const char *p;
     int num = 0;
+    int (*ptrfunction)(va_list);
 
     if (format == NULL)
         return -1;
@@ -28,11 +29,12 @@ int _printf(const char *format, ...)
         else if (*p == '%' && *(p + 1) != '%')
         {
             char specifier = *(p + 1);
-            int result = 0;
-
-            if (get_functions(specifier, args))
+            int result;
+            ptrfunction = get_functions(&specifier);
+        
+            if (ptrfunction)
             {
-                result = get_functions(specifier, args);
+                result = ptrfunction(args);
             }
             else
             {
@@ -51,5 +53,5 @@ int _printf(const char *format, ...)
     }
 
     va_end(args);
-    return num;
+    return (num);
 }
