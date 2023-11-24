@@ -9,6 +9,9 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putchar(char c);
+int printchar(va_list args);
+void printstring(va_list args);
+int printmodulo(va_list args);
 
 typedef struct specifiers {
     char specifiers;

@@ -1,45 +1,51 @@
-printf(3)                                      User Commands                                     printf(3)
+.TH PRINTF 1 "November 2023" "User Commands"
 
-NAME
-       printf - format and print data
+.SH NAME
+.B printf
+\- format and print data
 
-SYNOPSIS
-       printf FORMAT [ARGUMENT]...
+.SH SYNOPSIS
+.B printf FORMAT [ARGUMENT]...
 
-DESCRIPTION
-       printf formats and prints data according to the FORMAT specification. It is similar to the C
-       function printf() and provides a powerful way to format and display output.
+.SH DESCRIPTION
+.B printf
+formats and prints data according to the FORMAT specification. It is similar to the C
+function \fIprintf()\fR and provides a powerful way to format and display output.
 
-OPTIONS
-       The printf command supports various format specifiers, which begin with a percent sign (%) and are
-       followed by one or more format characters. The most common format specifiers include:
+.SH OPTIONS
+The \fBprintf\fR command supports various format specifiers, which begin with a percent sign (%) and are
+followed by one or more format characters. The most common format specifiers include:
 
-       %c     Print a character.
+.TP
+.B %c
+Print a character.
 
-       %s     Print a string.
+.TP
+.B %s
+Print a string.
 
-       %d     Print a signed decimal.
-       
-       %i     Print a signed integer.
+.TP
+.B %d, %i
+Print a signed decimal integer.
 
-ARGUMENTS
-       FORMAT A string that specifies the format of the output. It can contain plain text and format
-              specifiers.
+.SH ARGUMENTS
+\fIFORMAT\fR
+A string that specifies the format of the output. It can contain plain text and format specifiers.
 
-       ARGUMENT
-              Values to be formatted and printed according to the format specifiers in the FORMAT string.
+\fIARGUMENT\fR
+Values to be formatted and printed according to the format specifiers in the \fIFORMAT\fR string.
 
-EXAMPLES
-       To print a simple string:
+.SH EXAMPLES
+To print a simple string:
 
-              printf ("Hello, World!\n")
+.BR printf "Hello, World!\n"
 
-       To print a formatted integer:
+To print a formatted integer:
 
-              printf ("The answer is: %d\n")
+.BR printf "The answer is: %d\n" 42
 
-BUGS
-       Report bugs to https://github.com/Nathan9722/holbertonschool-printf
+.SH BUGS
+Report bugs to <bug-report@example.com>
 
-AUTHOR
-       Written by Nathan & Ali
+.SH AUTHOR
+Written by John Doe <john.doe@example.com>
