@@ -29,7 +29,6 @@ int _printf(const char *format, ...)
         {
             char specifier = *(p + 1);
 
-<<<<<<< HEAD
             if (get_functions(specifier, args))
             {
                 num += get_functions(specifier, args);
@@ -48,36 +47,6 @@ int _printf(const char *format, ...)
             num++;
         }
     }
-=======
-			if (specifier == 'c')
-				num += printchar(arguments);
-			else if (specifier == 's')
-				num += printstring(arguments);
-			else if (specifier == '%')
-			{
-				_putchar('%');
-				num++;
-			}
-			else if (specifier == 'i' || specifier == 'd')
-				num += printdigit(arguments);
-			else if (specifier == '\0')
-				return (-1);
-			else
-			{
-                else if (specifier == '%')
-				_putchar('%');
-				_putchar(specifier);
-				num += 2;
-			}
-			p++;
-		}
-		else
-		{
-			_putchar(*p);
-			num++;
-		}
-	}
->>>>>>> 95be83eb593215e0f3abd4ce08cacfe2615a995d
 
     va_end(args);
     return num;
