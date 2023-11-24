@@ -3,9 +3,11 @@
 #include "main.h"
 
 /**
- * _printf - print anything
- * @format: arguments
- * Return: number of characters printed
+ * _printf - copy of the original printf.
+ *
+ * @format: Format by specifier.
+ *
+ * Return: count of chars.
  */
 int _printf(const char *format, ...)
 {
