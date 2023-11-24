@@ -11,14 +11,14 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list arguments;
+	va_list args;
 	const char *p;
 	int num = 0;
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(arguments, format);
+	va_start(args, format);
 
 	for (p = format; *p; p++)
 	{
@@ -33,16 +33,16 @@ int _printf(const char *format, ...)
 			char specifier = *(p + 1);
 
 			if (specifier == 'c')
-				num += printchar(arguments);
+				num += printchar(args);
 			else if (specifier == 's')
-				num += printstring(arguments);
+				num += printstring(args);
 			else if (specifier == '%')
 			{
 				_putchar('%');
 				num++;
 			}
 			else if (specifier == 'i' || specifier == 'd')
-				num += printdigit(arguments);
+				num += printdigit(args);
 			else if (specifier == '\0')
 				return (-1);
 			else
@@ -61,6 +61,6 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	va_end(arguments);
+	va_end(args);
 	return (num);
 }
