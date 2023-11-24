@@ -9,7 +9,6 @@
  */
 int main(void)
 {
-<<<<<<< HEAD
 	int len;
 	int len2;
     unsigned int ui;
@@ -23,17 +22,6 @@ int main(void)
 	len2 = printf("Let's try to printf a %s simple sentence.\n", "coucou");
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe6375;
-=======
-    int len;
-    int len2;
-    unsigned int ui;
-    void *addr;
-
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
->>>>>>> 95be83eb593215e0f3abd4ce08cacfe2615a995d
     _printf("Length:[%d, %i]\n", len, len);
     printf("Length:[%d, %i]\n", len2, len2);
     _printf("Negative:[%d]\n", -762534);
@@ -56,7 +44,6 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
-<<<<<<< HEAD
 
     printf("\n\n/*-------------percentage test------------*/\n\n");
     /*-------------percentage test------------*/
@@ -115,7 +102,4 @@ int main(void)
 
 
 	return (0);
-=======
-    return (0);
->>>>>>> 95be83eb593215e0f3abd4ce08cacfe2615a995d
 }
