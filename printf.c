@@ -28,17 +28,19 @@ int _printf(const char *format, ...)
         else if (*p == '%' && *(p + 1) != '%')
         {
             char specifier = *(p + 1);
+            int result = 0;
 
             if (get_functions(specifier, args))
             {
-                num += get_functions(specifier, args);
+                result = get_functions(specifier, args);
             }
             else
             {
                 _putchar('%');
                 _putchar(specifier);
-                num += 2;
+                result = 2;
             }
+            num += result;
             p++;
         }
         else
