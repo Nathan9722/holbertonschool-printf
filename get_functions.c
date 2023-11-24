@@ -2,26 +2,26 @@
 
 /**
  * get_functions - function specifier.
- * @convert: convert specifiers.
+ * @specifier: convert specifiers.
  * @args: arguments.
  * Return: 0.
  */
 
-int get_functions(char convert, va_list args) {
+int (*get_functions(char *specifier))(va_list) {
     int i = 0;
 
     specifiers format[] = {
-        {'c', printchar},
-        {'s', printstring},
-        {'%', printmodulo},
-        {'d', printdigit},
-        {'i', printdigit},
-        {0, NULL}
+        {"c", printchar},
+        {"s", printstring},
+        {"%", printmodulo},
+        {"d", printdigit},
+        {"i", printdigit},
+        {'\0', NULL}
     };
 
-    while (format[i].specifiers) {
-        if (convert == format[i].specifiers)
-            return format[i].f(args);
+    while (format[i].specifier) {
+        if (specifier[0] == format[i].specifier[0])
+            return format[i].f;
         i++;
     }
 
