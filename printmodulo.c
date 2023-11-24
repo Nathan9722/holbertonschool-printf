@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * print_mod - Print %.
+ * printmodulo - Print %.
  * @args: Arguments.
  * Return: Chars.
  */

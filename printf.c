@@ -1,65 +1,62 @@
-#include <stdlib.h>
-#include <stdarg.h>
 #include "main.h"
+#include <stdarg.h>
 
 /**
- * _printf - copy of the original printf.
- *
- * @format: Format by specifier.
- *
- * Return: count of chars.
+ * _printf - Format and print data.
+ * @format: Format string.
+ * Return: Number of characters printed.
  */
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
 	va_list args;
 	const char *p;
 	int num = 0;
+=======
+    va_list args;
+    const char *p;
+    int num = 0;
+>>>>>>> f4a64e9a299c4e252e28a5abc90a11b6fbedd254
 
-	if (format == NULL)
-		return (-1);
+    if (format == NULL)
+        return -1;
 
+<<<<<<< HEAD
 	va_start(args, format);
+=======
+    va_start(args, format);
+>>>>>>> f4a64e9a299c4e252e28a5abc90a11b6fbedd254
 
-	for (p = format; *p; p++)
-	{
-		if (*p == '%' && *(p + 1) == '%')
-		{
-			_putchar(*p);
-			num++;
-			p++;
-		}
-		else if (*p == '%' && *(p + 1) != '%')
-		{
-			char specifier = *(p + 1);
+    for (p = format; *p; p++)
+    {
+        if (*p == '%' && *(p + 1) == '%')
+        {
+            _putchar(*p);
+            num++;
+            p++;
+        }
+        else if (*p == '%' && *(p + 1) != '%')
+        {
+            char specifier = *(p + 1);
 
-			if (specifier == 'c')
-				num += printchar(args);
-			else if (specifier == 's')
-				num += printstring(args);
-			else if (specifier == '%')
-			{
-				_putchar('%');
-				num++;
-			}
-			else if (specifier == 'i' || specifier == 'd')
-				num += printdigit(args);
-			else if (specifier == '\0')
-				return (-1);
-			else
-			{
-                else if (specifier == '%')
-				_putchar('%');
-				_putchar(specifier);
-				num += 2;
-			}
-			p++;
-		}
-		else
-		{
-			_putchar(*p);
-			num++;
-		}
-	}
+            if (get_functions(specifier, args))
+            {
+                num += get_functions(specifier, args);
+            }
+            else
+            {
+                _putchar('%');
+                _putchar(specifier);
+                num += 2;
+            }
+            p++;
+        }
+        else
+        {
+            _putchar(*p);
+            num++;
+        }
+    }
 
 	va_end(args);
 	return (num);

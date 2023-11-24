@@ -1,24 +1,17 @@
 #include "main.h"
-#include <unistd.h>
 #include <stdarg.h>
 
-/**
- * print_string - Print string.
- * @args: Argument.
- * Return: Nothing.
- */
-
-void printstring(va_list args)
+int printstring(va_list arg)
 {
-    char *str = va_arg(args, char *);
+	int i = 0;
+	char *s = va_arg(arg, char *);
 
-    if (!str)
-        str = "NULL";
-
-    if (str[0] != '\0')
-    {
-        int i;
-        for (i = 0; str[i] != '\0'; i++)
-            _putchar(str[i]);
-    }
+	if (s == NULL)
+		s = "(null)";
+	while (s[i] != '\0')
+	{
+		putchar(s[i]);
+		i++;
+	}
+	return (i);
 }

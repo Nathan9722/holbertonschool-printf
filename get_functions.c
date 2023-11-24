@@ -21,7 +21,7 @@ int get_functions(char convert, va_list args) {
 
     while (format[i].specifiers) {
         if (convert == format[i].specifiers)
-            return format[i].function(args);
+            return format[i].f(args);
         i++;
     }
 
