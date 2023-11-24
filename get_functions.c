@@ -14,14 +14,14 @@ int get_functions(char convert, va_list args) {
         {'c', printchar},
         {'s', printstring},
         {'%', printmodulo},
-        {'d', printdec},
-        {'i', printint},
-        {NULL, NULL}
+        {'d', printdigit},
+        {'i', printdigit},
+        {0, NULL}
     };
 
     while (format[i].specifiers) {
         if (convert == format[i].specifiers)
-            return format[i].function(args);
+            return format[i].f(args);
         i++;
     }
 
