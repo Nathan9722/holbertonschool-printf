@@ -14,9 +14,9 @@ int get_functions(char convert, va_list args) {
         {'c', printchar},
         {'s', printstring},
         {'%', printmodulo},
-        {'d', printdec},
-        {'i', printint},
-        {NULL, NULL}
+        {'d', printdigit},
+        {'i', printdigit},
+        {0, NULL}
     };
 
     while (format[i].specifiers) {
