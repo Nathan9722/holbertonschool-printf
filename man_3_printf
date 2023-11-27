@@ -45,7 +45,7 @@ To print a formatted integer:
 .BR printf "The answer is: %d\n" 42
 
 .SH BUGS
-Report bugs to <bug-report@example.com>
+Report bugs to https://github.com/Nathan9722/holbertonschool-printf
 
 .SH AUTHOR
-Written by John Doe <john.doe@example.com>
+Written by John Doe Ali and Nathan
