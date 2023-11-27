@@ -1,6 +1,6 @@
 ### _printf
 
-Hello, welcome to our first group project, we're replicating the printf() fucntion from the C Standard Library.
+Welcome to our first group project, we're replicating the printf() function from the C Standard Library.
 
 ### version 1.0
 
